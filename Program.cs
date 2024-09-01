@@ -18,7 +18,7 @@ builder.Services.AddControllersWithViews()
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString))); // Removed extra )
+    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
 MapsterConfig.RegisterMappings();
 
